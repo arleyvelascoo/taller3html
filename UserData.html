@@ -3,13 +3,13 @@
     <head>
         <title>Formulario</title>
         <meta charset="utf-8">
-     </head>
-     <body>
+    </head>
+    <body>
         <div style="width: 1200px;background-color:#8d99ae;height: 30px;margin-right: auto;margin-left: auto">
         <h1 style="font-size: 20px;text-align: center">Rellena tu CV</h1>
-         </div>
+        </div>
         <section>
-            <div style="width: 1200px;background-color:#edf2f4;height: 300px;margin-right: auto;margin-left: auto">
+            <div style="width: 1200px;background-color:#edf2f4;height: 600px;margin-right: auto;margin-left: auto">
                 <form>
                     <label for="fname">Nombre:</label><br>
                     <input type="text" id="Nombre" name="Nombre"><br>
@@ -20,16 +20,47 @@
                     <label for="lname">Confirme contraseña:</label><br>
                     <input type="text" id="ContraseñaConfirmacion" name="ContraseñaConfirmacion"><br><br>
                     <label for="lname">Identificacion:</label><br>
+                    <select id="Documento" name="Documento">
+                        <option value="TI">TI</option>
+                        <option value="CC">CC</option>
+                    </select>
+                    <input type="text" id="NumDocumento" name="NumDocumento"><br><br>
+                    <label for="sexo">Sexo:</label><br>
+                    <input type="radio" id="Hombre" name="genero" value="Hombre">
+                    <label for="Hombre">Hombre</label><br>
+                    <input type="radio" id="Mujer" name="genero" value="Mujer">
+                    <label for="Mujer">Mujer</label><br><br>
+                    <label for="Foto_perfil">Incluir mi foto</label><br>
+                    <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+                        <input type="file" name="imagen" />
+                    </form><br>
+                    <input type="checkbox" id="Estudiante" name="Estudiante" value="Estudiante">
+                    <label>Estudiante</label><br><br>
+                    <fieldset>
+                        <legend>Dattos personales:</legend>
+                        <label>Departamento</label><br>
+                        <select id="Departamento" name="Departamento">
+                            <option value="Santander">Santander</option>
+                            <option value="Tolima">Tolima</option>
+                            <option value="Meta" selected>Meta</option>
+                            <option value="Huila">Huila</option>
+                        </select><br>
+                        <label>Fecha de nacimiento</label><br>
+                        <input type = "text" id ="dia" name = "dia">
+                        <label>de</label>
+                        <select id="Mes" name="Mes">
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo" selected>Marzo</option>
+                            <option value="Abril">Abril</option>
+                        </select>
+                        <label>de</label>
+                        <input type = "text" id ="año" name = "año"><br><br>
+                        <textarea name="message" rows="10" cols="30">Sobre ti</textarea>
+                    </fieldset>
+                    <input type="submit" value="Submit" title="Guardar">
                 </form>  
                 
             </div>    
         </section>
-       
-     </body>
-     
-    
-   
-
-        
-       
-       
+    </body>
